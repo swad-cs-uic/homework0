@@ -37,19 +37,19 @@ describe.runIf(process.platform !== "win32")("basic", () => {
     });
   });
 
-  test("should show student email address on the live site", async () => {
+  test("(5 pts) should show student email address on the live site", async () => {
     await checkForEmail(website, email, page, true);
   });
 
-  test("should not show professor's email that was in the template on the live site", async () => {
+  test("(5 pts) should not show professor's email that was in the template on the live site", async () => {
     await checkForEmail(website, "ckanich@uic.edu", page, false);
   });
 
-  test("should show student email address on the dev server", async () => {
+  test("(5 pts) should show student email address on the dev server", async () => {
     await checkForEmail("http://localhost:3000", email, page, true);
   });
 
-  test("should not show professor's email that was in the template on the dev server", async () => {
+  test("(5 pts) should not show professor's email that was in the template on the dev server", async () => {
     await checkForEmail(
       "http://localhost:3000",
       "ckanich@uic.edu",
