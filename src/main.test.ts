@@ -10,7 +10,7 @@ const checkForEmail = async (
   url: string,
   email: string,
   page: Page,
-  shouldAppear: boolean
+  shouldAppear: boolean,
 ) => {
   await page.goto(url);
   const targetEmail = page.getByText(`website of ${email}`);
@@ -54,7 +54,7 @@ describe.runIf(process.platform !== "win32")("basic", () => {
       "http://localhost:3000",
       "ckanich@uic.edu",
       page,
-      false
+      false,
     );
   });
 });
