@@ -39,6 +39,7 @@
 		"dev": "vite",
 		"lint": "biome check",
 		"fix": "biome check --write",
+		"typecheck": "tsc --noEmit",
 		"preview": "npm run build && vite preview"
 	},
 	"type": "module"
