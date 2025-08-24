@@ -94,7 +94,9 @@ function App() {
               body: JSON.stringify({ score: count }),
             })
               .then((res) => res.json() as Promise<{ score: number }>)
-              .then((data) => setHighScore(data.score));
+              .then(
+                (data) => data.score > highScore && setHighScore(data.score),
+              );
           }}
           aria-label="get name"
         >

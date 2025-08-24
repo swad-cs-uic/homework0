@@ -6,6 +6,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "my-hono-app",
   "main": "./src/worker/index.ts",
+
   "compatibility_date": "2025-04-01",
   "compatibility_flags": ["nodejs_compat"],
   "observability": {
@@ -22,6 +23,14 @@
    * databases, object storage, AI inference, real-time communication and more.
    * https://developers.cloudflare.com/workers/runtime-apis/bindings/
    */
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "test-db",
+      "database_id": "de08e380-c2ed-4fe7-98a0-a45ca623debb",
+      "migrations_dir": "./drizzle/"
+    }
+  ],
   /**
    * Environment Variables
    * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
