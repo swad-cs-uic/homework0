@@ -15,7 +15,7 @@
     "publish": true
   },
   "dependencies": {
-    "drizzle-orm": "^0.44.4",
+    "drizzle-orm": "^0.45.0",
     "hono": "4.9.4",
     "react": "19.1.1",
     "react-dom": "19.1.1"
